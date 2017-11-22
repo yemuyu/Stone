@@ -2,7 +2,15 @@ package com.xy.token;
 
 import com.xy.exception.StoneException;
 
+/**
+ * 抽象类
+ * 解析返回的"单词"
+ * @author liufq
+ *
+ */
 public abstract class Token {
+	//new Token(-1){}是匿名内部类写法
+	//属性引用自身类的对象,静态属性才可以
 	public static final Token EOF = new Token(-1) {}; // end of file
 	public static final String EOL = "\\n"; // end of line
 	private int lineNumber;
